@@ -1,0 +1,62 @@
+div.gwd, div.gwp, div.gwpl {
+	position: absolute;
+  z-index: 10000;
+}
+
+div.gwp, div.gwd {
+  background: #000000 url( ../box/assets/gwp_gradient.png) repeat-x top left;
+	border: 1px solid #666;   
+}
+div.gwp_content, div.gwd_content{
+	font-size: 13px;
+	color: #ffffff;
+	line-height: 20px;
+	
+}
+/*
+div.gwd_outer {
+	background: #5088C8;
+	border: 1px solid black;
+	height: 100%;
+}
+div.gwp_content {
+  font-size: 16px;
+  color: white;
+}
+
+div.gwp_outer {
+	height: 100%;
+	background: #C0D0E0;
+	border: 1px solid black;
+	padding: 2px;
+}
+
+div.gwd_header {
+	font: 12px Arial, Helvetica, sans-serif;
+	color: white;
+	background: #5088C8; /* for MSIE to capture mousedown for drag *//*
+	padding: 4px 4px 0px;
+	height: 16px;
+}
+
+div.gwd_content {
+	background: white;
+	border: 1px solid black;
+	margin: 4px;
+	padding: 0px;
+}
+
+div.gwd_close {
+	float:right;
+	background: url(/$widget2/lib.ui.popup.win/box/assets/close.png);
+	width: 24px;
+	height: 18px;
+	margin-right: 4px;
+	margin-top: 3px;
+}
+
+div.gwd_close_over {
+	background-position: 0px 18px;
+}
+*/
+

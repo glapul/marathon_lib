@@ -1,0 +1,14 @@
+HTTrack3.44-1+libhtsjava.so.2 launched on Fri, 29 Nov 2013 18:29:48 at http://www.pygame.org/docs/ 2
+(winhttrack http://www.pygame.org/docs/ -O "/home/michal/websites/pygame" -Y -%v -r 2 )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+18:31:08	Error: 	"Receive Error" (-4) after 2 retries at link 2/robots.txt (from primary/primary)
+18:31:08	Info: 	Note: due to www.w3.org remote robots.txt rules, links begining with these path will be forbidden: /*/wp-admin/, /*/wp-includes/, /*/wp-content/plugins/, /*/wp-content/cache/, /*/wp-content/themes/, /blog/*/trackback/, /blog/*/feed/, /blog/*/comments/, /blog/*/category/*/*, /blog/*/*/trackback/, /blog/*/*/feed/, /blog/*/*/comments/, /blog/*/*?, /community/trackback/, /community/feed/, /community/comments/, /community/category/*/*, /community/*/trackback/, /community/*/feed/, /community/*/comments/, /community/*/category/*/*, /community/*?, /Consortium/Offices/trackback/, /Consortium/Offices/feed/, /Consortium/Offices/comments/, /Consortium/Offices/category/*/*, /Consortium/Offices/*/trackback/, /Consortium/Offices/*/feed/, /Consortium/Offices/*/comments/, /Consortium/Offices/*?, /wiki/index.php?, /wiki/index.php/Help, /wiki/index.php/MediaWiki, /wiki/index.php/Special:, /wiki/index.php/Template, /wiki/skins/, /*/wiki/index.php?, /*/wiki/index.php/Help, /*/wiki/index.php/MediaWiki, /*/wiki/index.php/Special:, /*/wiki/index.php/Template, /2004/ontaria/basic, /Team/, /Project, /Web, /Systems, /History, /Out-Of-Date, /2002/02/mid, /mid/, /2005/06/blog/, /2004/08/W3CTalks, /2007/11/Talks/search, /People/all/, /RDF/Validator/ARPServlet, /2003/03/Translations/byLanguage, /2003/03/Translations/byTechnology, /2005/11/Translations/Query, /2000/06/webdata/xslt, /2000/09/webdata/xslt, /2005/08/online_xslt/xslt, /Bugs/, /Search/Mail/Public/, /2006/02/chartergen, /2004/01/pp-impl, /Consortium/supporters, /2007/08/pyRdfa/, /WAI/PF/comments/ (see in the options to disable this)
+18:31:50	Error: 	"Receive Error" (-4) after 2 retries at link 2/ (from primary/primary)
+
+HTTrack Website Copier/3.44-1 mirror complete in 2 minutes 2 seconds : 100 links scanned, 94 files written (1956036 bytes overall) [747817 bytes received at 6129 bytes/sec], 1606521 bytes transfered using HTTP compression in 67 files, ratio 22%, 5.3 requests per connection
+(2 errors, 0 warnings, 1 messages)

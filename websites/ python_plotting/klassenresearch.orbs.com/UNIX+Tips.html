@@ -1,0 +1,1058 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  
+<!-- Mirrored from klassenresearch.orbs.com/UNIX+Tips by HTTrack Website Copier/3.x [XR&CO'2010], Fri, 29 Nov 2013 17:11:18 GMT -->
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+    
+    <title>UNIX Tips</title>
+<!-- OPTIMIZED HEAD -->
+<link href="%24widget2/lib.framework.withus/css/LIB.lib.framework.withus687c.css?-46d09ff1" rel="stylesheet" type="text/css">
+<link href="%24widget2/lib.framework.withus.css/css/LIB.lib.framework.withus.css3659.css?-5e1f03fe" rel="stylesheet" type="text/css">
+<link href="%24widget2/lib.withus.css.wu_formatted/css/LIB.lib.withus.css.wu_formatteda430.css?ffedc73" rel="stylesheet" type="text/css">
+<link href="%24widget2/lib.ui.popup.win/css/LIB.lib.ui.popup.win183b.css?29eb85d7" rel="stylesheet" type="text/css">
+<link href="https://static.orbs.com/$rt/app/w/box/start/pub/print.css" rel="stylesheet" type="text/css" media="print" />
+<link href="https://static.orbs.com/fs/4c7eb5880b46a76d6d00000a.css" type="text/css" rel="stylesheet" >
+<link href="https://static.orbs.com/fs/4bacf4ccbe70920bc8000019.css" type="text/css" rel="stylesheet" >
+<link href="https://static.orbs.com/$rt/app/w/feature/wiki/view/pub/feature.wiki.view.css" type="text/css" rel="stylesheet" >
+<link href="https://static.orbs.com/$rt/app/w/lib/ui/tree/pub/tree.css" type="text/css" rel="stylesheet" />
+<style>
+
+	  body {
+	margin:0px;
+	border:0px;
+	padding:0px;
+  font-family: arial;
+  font-size: 13px;
+  color: #444;
+	}
+	
+.ubar_div_fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+	height: 55px;
+  z-index: 9999;
+	}
+	
+* html .ubar_div_fixed {
+  
+  position: absolute;
+  top: expression( ( temp = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop )  + 'px' );
+	}
+
+
+
+
+.ubar_outer{
+	background: url(https://static.orbs.com/$rt/app/w/template/userbar/pub/images/ubar_bg2.png);
+	height: 40px;
+	position: fixed;
+	width: 100%;
+	}
+	
+.ubar_inner{
+  background: url(https://static.orbs.com/$rt/app/w/template/userbar/pub/images/ubar_bg2.png);
+	width: 990px;
+	height: 40px;
+	margin: 0px auto;	
+	}
+
+
+
+.ubar_logo{
+	float: left;
+  background: url(https://static.orbs.com/$rt/app/w/template/userbar/pub/images/toolbar_public_sprite.png);
+	width: 50px;
+	height: 36px;
+	cursor: pointer;	
+	}
+	
+
+
+.ubar_button{
+  float: left;
+  background: url(https://static.orbs.com/$rt/app/w/template/userbar/pub/images/toolbar_public_sprite.png) 0px 0px no-repeat;
+  height: 35px; 
+  cursor: pointer;
+  display: block;
+  text-decoration: none;      
+}
+
+.ubar_button_create_your_own_site{
+  background-position: -60px 0;
+}
+.ubar_button_create_your_own_site:hover{
+  background-position: -60px -100px;
+}
+
+.ubar_button_sign_in{
+  background-position: -892px 0;
+}
+.ubar_button_sign_in:hover{
+  background-position: -892px -100px;
+}
+
+
+.button_text{
+  text-indent: -5000px;
+  color: white;
+  display: inline-block;
+} 
+
+.ubar_button_space{
+  float: left;
+  height: 36px; 
+  text-decoration: none;
+}
+  
+
+
+
+
+
+
+.login_outter {
+  height: 27px;
+	cursor: pointer;
+}
+
+.login_text {
+  float: left;
+  margin-top: 6px;
+  margin-right: 4px;
+	color: white;
+}
+.login_dropdown {
+	margin-top: -1px;
+}
+.login_arrow {
+	float: left;
+	background: url(https://static.orbs.com/$rt/app/w/template/userbar/pub/images/toolbar_public_sprite.png);
+	background-position: 11px 0px;
+	width: 11px;
+	height: 27px;
+}
+
+
+
+.ubar_placeholder{
+	height: 36px;
+	}
+
+	
+  
+
+	.login_dropdown {
+  width: 200px;
+	background: black url(https://static.orbs.com/$rt/app/w/lib/withus/login_dropdown/pub/dropdown_gradient.png) repeat-x top left;
+}
+
+
+
+.login_form {
+	padding: 10px 20px 10px 15px;
+	color: #fff;
+	font-size: 12px;
+}
+
+input.gray_field {
+	margin-top: 2px;
+	background-color: #ccc;
+	border: 1px solid #666;
+	width: 100%;
+	height: 20px;
+}
+	
+
+
+.rounded {
+	cursor: pointer;
+	cursor: hand;
+	height: 26px;
+	line-height: 26px;
+	background: url(https://static.orbs.com/$rt/app/w/lib/withus/login_dropdown/pub/form_buttons.png) no-repeat right top;
+	padding-right: 8px;
+	display: inline-block;
+}
+
+.rounded span {
+	background: url(https://static.orbs.com/$rt/app/w/lib/withus/login_dropdown/pub/form_buttons.png) no-repeat left top;
+	height: 26px;
+	line-height: 26px;
+	display: inline-block;
+	padding-left: 8px;
+	color: #fff;
+	text-decoration: none;
+}
+
+	
+.rounded_form {
+	background-position: right -26px;
+}
+
+.rounded_form span {
+	background-position: left -26px;
+}
+	
+a.forgot_link {
+	color: #DDAC01;
+	font-size: 11px;
+}
+	
+a.rounded_form {
+	text-decoration: none;
+}
+
+a.rounded_form:hover {
+	background-position: right 0px;
+}
+
+a.rounded_form:hover span {
+	background-position: left 0px;
+}
+	
+
+
+  
+body {
+  background: url(https://static.orbs.com/is/4b8d5f5118f5381f750013a2.jpg);
+  height: 100%;
+}
+
+html {
+  height: 100%;
+}
+
+
+
+div.custom_template_template_container {
+		margin-left: auto;
+		margin-right: auto;
+	
+	width: 1010px;
+	background-image: url( https://static.orbs.com/fs/4c293a72e603a119b800002e.jpg);
+	background-repeat: repeat-y;
+}
+
+
+* html div.custom_template_template_container {
+  height: 100%;
+}
+
+
+
+div.custom_template_background {
+	width: 1010px;
+	background-image: url( https://static.orbs.com/fs/4c293a72e603a119b800002e.jpg);
+	background-repeat: repeat-y;
+	position: absolute;
+	top: 0px;
+	z-index: -100;
+	min-height: 100%;
+}
+
+
+* html div.custom_template_background {
+  height: 100%;
+}
+
+div.custom_template_header {
+  position: relative;
+	background-image: url( https://static.orbs.com/fs/4c293a70e603a119b8000026.jpg);
+	background-repeat: no-repeat;
+	margin-top: 0px;
+  height: 156px;
+}
+
+div.custom_template_content {
+	
+  margin-top: -10px;
+  width: 890px;
+  
+  margin-left: 60px;
+	position: relative;
+}
+
+
+div.custom_template_footer {
+	
+	clear: both;
+	
+	height: 60px;
+  
+  position: relative;
+  width: 890px;
+  
+  margin-left: 60px;
+
+}
+
+
+div.custom_template_toolbar {
+  position: absolute;
+  
+    right: 61px;
+  top: 26px;  
+  height: 25px;
+  background: #0d0d0d;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+a.custom_template_toolbar_text {
+  line-height: 25px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 11px;
+}
+
+
+div.nav_bar_header {
+  position: absolute;
+  width: 1010px;
+  height: 146px;
+  top: 0px;
+  left: 0px;
+}
+
+div.nav_bar_header a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-decoration: none;
+}
+
+
+
+  #wiki_editor {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  } 
+
+
+  .search_field_faded{
+    color: #bbbbbb;
+  }
+
+</style>
+<!-- END OPTIMIZED HEAD -->
+  </head>
+  <body>
+
+    
+
+
+    <script !>
+  if( typeof _kmq === 'undefined' ) {
+    // Pasted from KISSmetrics
+    var _kmq = _kmq || [];
+    function _kms(u){
+      setTimeout(function(){
+        var s = document.createElement('script'); var f = document.getElementsByTagName('script')[0]; s.type = 'text/javascript'; s.async = true;
+        s.src = u; f.parentNode.insertBefore(s, f);
+      }, 1);
+    }
+    _kms('http://i.kissmetrics.com/i.js');
+    _kms('http://doug1izaerwt3.cloudfront.net/ccad348760756530b4c0467d4eff60ddbd01c789.1.js');
+  }
+</script>
+
+  <script !>
+    // IDENTIFY
+    
+    // RECORD PAGE VIEWED
+    
+    // SET PROPERTIES
+    
+    // TRACK CLICKS
+      _kmq.push( [ 'trackClick', 'create_your_own_site_button', 'Clicked create site from logged out userbar' ] );
+  </script>
+  
+  <div class="ubar_outer ubar_div_fixed" id="ubar_div_fixed">
+	  <div class="ubar_outer">
+		  <div class="ubar_inner">
+        <div class="ubar_button_space" style="width:20px;"></div>             
+				  
+				  <a href="http://orbs.com/" class="ubar_logo"></a>			
+					
+						
+						
+						
+						
+							
+						
+					
+		      <div class="ubar_button_space" style="width:830px;"></div>   					
+
+			  
+        <div id="" class="login_outter">
+		      <a id="login_outter" class="ubar_button ubar_button_sign_in" 
+		        style="width: 75px;" 
+		        href="http://orbs.com/_userauth/login/form?finish_url=http://klassenresearch.orbs.com/UNIX+Tips">
+		        <span class="button_text">
+		          Sign in
+		        </span>
+		      </a> 				
+				</div>	
+		
+		  </div>
+	  </div>
+  </div>
+  <div class="ubar_placeholder"></div>
+<div style="display: none">
+  <div id="login_dropdown_uid_26cB7ZZO3PZpDTY9KDEA" class="login_dropdown">
+    <form id="login_form_uid_26cB7ZZO3PZpDTY9KDEA" action="https://klassenresearch.orbs.com/_userauth/login/form?finish_url=http://klassenresearch.orbs.com/UNIX+Tips" method="post" class="login_form">
+	    <div>
+		    Username:
+		    <input type="text" id="username_uid_26cB7ZZO3PZpDTY9KDEA" name="username" class="gray_field" tabindex="1" />
+	    </div>
+	    <div style="margin-top:10px;">
+		    <span style="margin-right: 5px;">Password:</span> <a href="_userauth/password3664.html?finish_url=http://klassenresearch.orbs.com/UNIX+Tips" class="forgot_link">forgot password</a>
+        <input type="password" id="password_uid_26cB7ZZO3PZpDTY9KDEA" name="password" class="gray_field" tabindex="2" />
+	    </div>
+	    <div style="margin-top:10px;">
+		    <label>
+          <input type="checkbox" id="keep_uid_26cB7ZZO3PZpDTY9KDEA" style="margin-right: 3px;" name="keep_me_logged_in" tabindex="3" />
+			    remember me
+		    </label>
+	    </div>
+	    <div style="clear:both;"></div>
+      <a href="#" class="rounded rounded_form" id="login_button_uid_26cB7ZZO3PZpDTY9KDEA" style="margin-top:10px;" tabindex="4">
+		    <span>
+			    Login
+		    </span>
+	    </a>
+    </form>
+  </div>
+</div>
+
+<div class="custom_template_template_container">
+  <div class="custom_template_background">
+  </div>  
+  <div class="custom_template_header">
+    <div class="nav_bar_header">
+    	<a href="index.html" title="Home"></a>
+    </div>      
+  </div>
+  <div class="custom_template_content">
+    <div style="clear:both;">
+
+
+
+
+<div class="wiki_header">
+	<div class="wu_formatted bread_crumb">
+    <div class='tree_bread_crumb'><a href='Home.html' class='tree_bread_crumb_item'>Home</a>  &gt; UNIX Tips</div>
+	</div>
+</div>
+
+
+<div style="top: 10px; position: relative; width: 600px; float: left; padding-bottom: 55px;">
+
+<div id="wiki_editor" class="goo_editor_container wu_formatted wu_formatted "><h1>UNIX Tips</h1><p id="1279896588351">Below is a list of tips and tricks that I've learned working in a UNIX environment to increase productivity and make better use of the operating system.</p><ul><li id="1298060788420"><a target="_top" href="Adding%2ba%2bdirectory%2bto%2byour%2bPATH.html" id="1279896922060">Adding a directory to your PATH</a></li><li><a target="_top" href="Timing%2ba%2bprogram%2bfrom%2bthe%2bshell.html" id="1279896931197">Timing a program from the shell</a></li><li><a target="_top" href="A%2bscript%2bto%2bcheck%2ba%2bfile%27s%2bsize.html" id="1279896946213">A script to print a file's size</a></li><li><a target="_top" href="Customizing%2bvim.html" id="1298060812578">Customizing vim</a></li></ul><p id="1279896588351"><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p></div>
+
+
+		
+</div>
+
+<div style="width: 50px; float: left;">&nbsp;</div>
+
+
+<div id="sidebar_container" class="sidebar_container" style="width: 240px;">
+
+  <div class="search_box">
+    
+<form action="https://klassenresearch.orbs.com/~search" method="get">
+  <div class="search_container">
+    <input class="go_search_form search_field_faded" type="text" name="q" value="Search...">
+		<input class="go_search_button" type="submit" value="">
+  </div>
+</form>
+
+  </div>
+	<div class="tos_heading wu_formatted">Table of Contents</div>
+  <div id="pre_rendered_tree_container">
+    <div class="node_container">
+  <div class="node_name_container _node_name_container">
+    <div class="node_open_close_indicator"></div>
+    <a class="node_icon _node_icon" href="Home.html">Home</a>
+    <div class="node_name wu_formatted">
+      <a class="node_name_inner _node_name_inner " href="Home.html">Home</a>
+    </div>
+    <div style="clear: both;"></div>
+  </div>
+  <div class="node_children_container node_children_showing">
+    <div class="node_drop_zone _node_child_drop_zone"></div>
+    <div class="node_children_inner">
+      <div class="node_container">
+  <div class="node_name_container _node_name_container">
+    <div class="node_open_close_indicator _node_open_close_indicator "></div>
+    <a class="node_icon _node_icon" href="Research.html">Research</a>
+    <div class="node_name wu_formatted">
+      <a class="node_name_inner _node_name_inner " href="Research.html">Research</a>
+    </div>
+    <div style="clear: both;"></div>
+  </div>
+  <div style="clear: both;"></div>
+  <div class="node_children_container ">
+    <div class="node_drop_zone _node_child_drop_zone"></div>
+    <div class="node_children_inner">
+      
+    </div>
+  </div>
+  <div class="node_drop_zone node_sibling_drop_zone"></div>
+</div><div class="node_container">
+  <div class="node_name_container _node_name_container">
+    <div class="node_open_close_indicator _node_open_close_indicator "></div>
+    <a class="node_icon _node_icon" href="Curriculum%2bVitae.html">Curriculum Vitae</a>
+    <div class="node_name wu_formatted">
+      <a class="node_name_inner _node_name_inner " href="Curriculum%2bVitae.html">Curriculum Vitae</a>
+    </div>
+    <div style="clear: both;"></div>
+  </div>
+  <div style="clear: both;"></div>
+  <div class="node_children_container ">
+    <div class="node_drop_zone _node_child_drop_zone"></div>
+    <div class="node_children_inner">
+      
+    </div>
+  </div>
+  <div class="node_drop_zone node_sibling_drop_zone"></div>
+</div><div class="node_container">
+  <div class="node_name_container _node_name_container">
+    <div class="node_open_close_indicator _node_open_close_indicator "></div>
+    <a class="node_icon _node_icon" href="Other%2bActivities.html">Other Activities</a>
+    <div class="node_name wu_formatted">
+      <a class="node_name_inner _node_name_inner " href="Other%2bActivities.html">Other Activities</a>
+    </div>
+    <div style="clear: both;"></div>
+  </div>
+  <div style="clear: both;"></div>
+  <div class="node_children_container ">
+    <div class="node_drop_zone _node_child_drop_zone"></div>
+    <div class="node_children_inner">
+      
+    </div>
+  </div>
+  <div class="node_drop_zone node_sibling_drop_zone"></div>
+</div><div class="node_container">
+  <div class="node_name_container _node_name_container">
+    <div class="node_open_close_indicator _node_open_close_indicator "></div>
+    <a class="node_icon _node_icon" href="Astronomy%2bResources.html">Astronomy Resources</a>
+    <div class="node_name wu_formatted">
+      <a class="node_name_inner _node_name_inner " href="Astronomy%2bResources.html">Astronomy Resources</a>
+    </div>
+    <div style="clear: both;"></div>
+  </div>
+  <div style="clear: both;"></div>
+  <div class="node_children_container ">
+    <div class="node_drop_zone _node_child_drop_zone"></div>
+    <div class="node_children_inner">
+      
+    </div>
+  </div>
+  <div class="node_drop_zone node_sibling_drop_zone"></div>
+</div><div class="node_container">
+  <div class="node_name_container _node_name_container">
+    <div class="node_open_close_indicator _node_open_close_indicator "></div>
+    <a class="node_icon _node_icon" href="Design.html">Design</a>
+    <div class="node_name wu_formatted">
+      <a class="node_name_inner _node_name_inner " href="Design.html">Design</a>
+    </div>
+    <div style="clear: both;"></div>
+  </div>
+  <div style="clear: both;"></div>
+  <div class="node_children_container ">
+    <div class="node_drop_zone _node_child_drop_zone"></div>
+    <div class="node_children_inner">
+      
+    </div>
+  </div>
+  <div class="node_drop_zone node_sibling_drop_zone"></div>
+</div><div class="node_container">
+  <div class="node_name_container _node_name_container">
+    <div class="node_open_close_indicator _node_open_close_indicator node_closed"></div>
+    <a class="node_icon _node_icon" href="IDL%2bTips.html">IDL Tips</a>
+    <div class="node_name wu_formatted">
+      <a class="node_name_inner _node_name_inner " href="IDL%2bTips.html">IDL Tips</a>
+    </div>
+    <div style="clear: both;"></div>
+  </div>
+  <div style="clear: both;"></div>
+  <div class="node_children_container ">
+    <div class="node_drop_zone _node_child_drop_zone"></div>
+    <div class="node_children_inner">
+      <div class="node_container">
+  <div class="node_name_container _node_name_container">
+    <div class="node_open_close_indicator _node_open_close_indicator "></div>
+    <a class="node_icon _node_icon" href="Run%2ban%2bIDL%2bscript%2bat%2bstartup.html">Run an IDL script at startup</a>
+    <div class="node_name wu_formatted">
+      <a class="node_name_inner _node_name_inner " href="Run%2ban%2bIDL%2bscript%2bat%2bstartup.html">Run an IDL script at startup</a>
+    </div>
+    <div style="clear: both;"></div>
+  </div>
+  <div style="clear: both;"></div>
+  <div class="node_children_container ">
+    <div class="node_drop_zone _node_child_drop_zone"></div>
+    <div class="node_children_inner">
+      
+    </div>
+  </div>
+  <div class="node_drop_zone node_sibling_drop_zone"></div>
+</div><div class="node_container">
+  <div class="node_name_container _node_name_container">
+    <div class="node_open_close_indicator _node_open_close_indicator "></div>
+    <a class="node_icon _node_icon" href="Emulate%2blinspace%2band%2blogspace.html">Emulate linspace and logspace</a>
+    <div class="node_name wu_formatted">
+      <a class="node_name_inner _node_name_inner " href="Emulate%2blinspace%2band%2blogspace.html">Emulate linspace and logspace</a>
+    </div>
+    <div style="clear: both;"></div>
+  </div>
+  <div style="clear: both;"></div>
+  <div class="node_children_container ">
+    <div class="node_drop_zone _node_child_drop_zone"></div>
+    <div class="node_children_inner">
+      
+    </div>
+  </div>
+  <div class="node_drop_zone node_sibling_drop_zone"></div>
+</div>
+    </div>
+  </div>
+  <div class="node_drop_zone node_sibling_drop_zone"></div>
+</div><div class="node_container">
+  <div class="node_name_container _node_name_container">
+    <div class="node_open_close_indicator _node_open_close_indicator node_opened"></div>
+    <a class="node_icon _node_icon" href="UNIX%2bTips.html">UNIX Tips</a>
+    <div class="node_name wu_formatted">
+      <a class="node_name_inner _node_name_inner node_name_current" href="UNIX%2bTips.html">UNIX Tips</a>
+    </div>
+    <div style="clear: both;"></div>
+  </div>
+  <div style="clear: both;"></div>
+  <div class="node_children_container node_children_showing">
+    <div class="node_drop_zone _node_child_drop_zone"></div>
+    <div class="node_children_inner">
+      <div class="node_container">
+  <div class="node_name_container _node_name_container">
+    <div class="node_open_close_indicator _node_open_close_indicator "></div>
+    <a class="node_icon _node_icon" href="Timing%2ba%2bprogram%2bfrom%2bthe%2bshell.html">Timing a program from the shell</a>
+    <div class="node_name wu_formatted">
+      <a class="node_name_inner _node_name_inner " href="Timing%2ba%2bprogram%2bfrom%2bthe%2bshell.html">Timing a program from the shell</a>
+    </div>
+    <div style="clear: both;"></div>
+  </div>
+  <div style="clear: both;"></div>
+  <div class="node_children_container ">
+    <div class="node_drop_zone _node_child_drop_zone"></div>
+    <div class="node_children_inner">
+      
+    </div>
+  </div>
+  <div class="node_drop_zone node_sibling_drop_zone"></div>
+</div><div class="node_container">
+  <div class="node_name_container _node_name_container">
+    <div class="node_open_close_indicator _node_open_close_indicator "></div>
+    <a class="node_icon _node_icon" href="Customizing%2bvim.html">Customizing vim</a>
+    <div class="node_name wu_formatted">
+      <a class="node_name_inner _node_name_inner " href="Customizing%2bvim.html">Customizing vim</a>
+    </div>
+    <div style="clear: both;"></div>
+  </div>
+  <div style="clear: both;"></div>
+  <div class="node_children_container ">
+    <div class="node_drop_zone _node_child_drop_zone"></div>
+    <div class="node_children_inner">
+      
+    </div>
+  </div>
+  <div class="node_drop_zone node_sibling_drop_zone"></div>
+</div><div class="node_container">
+  <div class="node_name_container _node_name_container">
+    <div class="node_open_close_indicator _node_open_close_indicator "></div>
+    <a class="node_icon _node_icon" href="Checksums.html">Checksums</a>
+    <div class="node_name wu_formatted">
+      <a class="node_name_inner _node_name_inner " href="Checksums.html">Checksums</a>
+    </div>
+    <div style="clear: both;"></div>
+  </div>
+  <div style="clear: both;"></div>
+  <div class="node_children_container ">
+    <div class="node_drop_zone _node_child_drop_zone"></div>
+    <div class="node_children_inner">
+      
+    </div>
+  </div>
+  <div class="node_drop_zone node_sibling_drop_zone"></div>
+</div>
+    </div>
+  </div>
+  <div class="node_drop_zone node_sibling_drop_zone"></div>
+</div><div class="node_container">
+  <div class="node_name_container _node_name_container">
+    <div class="node_open_close_indicator _node_open_close_indicator node_closed"></div>
+    <a class="node_icon _node_icon" href="High-Performance%2bComputing.html">High-Performance Computing</a>
+    <div class="node_name wu_formatted">
+      <a class="node_name_inner _node_name_inner " href="High-Performance%2bComputing.html">High-Performance Computing</a>
+    </div>
+    <div style="clear: both;"></div>
+  </div>
+  <div style="clear: both;"></div>
+  <div class="node_children_container ">
+    <div class="node_drop_zone _node_child_drop_zone"></div>
+    <div class="node_children_inner">
+      <div class="node_container">
+  <div class="node_name_container _node_name_container">
+    <div class="node_open_close_indicator _node_open_close_indicator "></div>
+    <a class="node_icon _node_icon" href="Running%2bFLASH%2bon%2bSciNet.html">Running FLASH on SciNet</a>
+    <div class="node_name wu_formatted">
+      <a class="node_name_inner _node_name_inner " href="Running%2bFLASH%2bon%2bSciNet.html">Running FLASH on SciNet</a>
+    </div>
+    <div style="clear: both;"></div>
+  </div>
+  <div style="clear: both;"></div>
+  <div class="node_children_container ">
+    <div class="node_drop_zone _node_child_drop_zone"></div>
+    <div class="node_children_inner">
+      
+    </div>
+  </div>
+  <div class="node_drop_zone node_sibling_drop_zone"></div>
+</div>
+    </div>
+  </div>
+  <div class="node_drop_zone node_sibling_drop_zone"></div>
+</div><div class="node_container">
+  <div class="node_name_container _node_name_container">
+    <div class="node_open_close_indicator _node_open_close_indicator node_closed"></div>
+    <a class="node_icon _node_icon" href="Python.html">Python</a>
+    <div class="node_name wu_formatted">
+      <a class="node_name_inner _node_name_inner " href="Python.html">Python</a>
+    </div>
+    <div style="clear: both;"></div>
+  </div>
+  <div style="clear: both;"></div>
+  <div class="node_children_container ">
+    <div class="node_drop_zone _node_child_drop_zone"></div>
+    <div class="node_children_inner">
+      <div class="node_container">
+  <div class="node_name_container _node_name_container">
+    <div class="node_open_close_indicator _node_open_close_indicator "></div>
+    <a class="node_icon _node_icon" href="Plotting%2bwith%2bPython.html">Plotting with Python</a>
+    <div class="node_name wu_formatted">
+      <a class="node_name_inner _node_name_inner " href="Plotting%2bwith%2bPython.html">Plotting with Python</a>
+    </div>
+    <div style="clear: both;"></div>
+  </div>
+  <div style="clear: both;"></div>
+  <div class="node_children_container ">
+    <div class="node_drop_zone _node_child_drop_zone"></div>
+    <div class="node_children_inner">
+      
+    </div>
+  </div>
+  <div class="node_drop_zone node_sibling_drop_zone"></div>
+</div>
+    </div>
+  </div>
+  <div class="node_drop_zone node_sibling_drop_zone"></div>
+</div><div class="node_container">
+  <div class="node_name_container _node_name_container">
+    <div class="node_open_close_indicator _node_open_close_indicator "></div>
+    <a class="node_icon _node_icon" href="Links.html">Links</a>
+    <div class="node_name wu_formatted">
+      <a class="node_name_inner _node_name_inner " href="Links.html">Links</a>
+    </div>
+    <div style="clear: both;"></div>
+  </div>
+  <div style="clear: both;"></div>
+  <div class="node_children_container ">
+    <div class="node_drop_zone _node_child_drop_zone"></div>
+    <div class="node_children_inner">
+      
+    </div>
+  </div>
+  <div class="node_drop_zone node_sibling_drop_zone"></div>
+</div>
+    </div>
+  </div>
+</div>
+   </div>
+   <div id="js_tree_container" style="display: none;">
+   </div>
+</div>
+<div style="clear: both;"></div>
+
+<div class="node_child_elements" style="display: none;">
+  <div class="node_container">
+  <div class="node_name_container _node_name_container">
+    <div class="node_open_close_indicator _node_open_close_indicator "></div>
+    <a class="node_icon _node_icon" href="#"></a>
+    <div class="node_name wu_formatted">
+      <a class="node_name_inner _node_name_inner " href="#"></a>
+    </div>
+    <div style="clear: both;"></div>
+  </div>
+  <div style="clear: both;"></div>
+  <div class="node_children_container ">
+    <div class="node_drop_zone _node_child_drop_zone"></div>
+    <div class="node_children_inner">
+      
+    </div>
+  </div>
+  <div class="node_drop_zone node_sibling_drop_zone"></div>
+</div>
+</div>
+
+<div class="node_root_elements" style="display: none">
+  <div class="node_container">
+  <div class="node_name_container _node_name_container">
+    <div class="node_open_close_indicator"></div>
+    <a class="node_icon _node_icon" href="#"></a>
+    <div class="node_name wu_formatted">
+      <a class="node_name_inner _node_name_inner " href="#"></a>
+    </div>
+    <div style="clear: both;"></div>
+  </div>
+  <div class="node_children_container ">
+    <div class="node_drop_zone _node_child_drop_zone"></div>
+    <div class="node_children_inner">
+      
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+<div style="display: none;">    				  	
+  <div id="a5298c9df34bc071b2d0000f2">
+    <div class="video_popup">
+      <div class="video_popup_content_wrap">
+      <div class="right" style="">
+        <a class="closeSticky" href="#" style="position: absolute; color: #dedede;">CLOSE</a>
+      </div> 	  	
+        <div class="video_popup_content">
+          <object width="720" height="405">
+            <param name="allowfullscreen" value="false" />
+            <param name="allowscriptaccess" value="always" />
+            <param name="movie" value="https://secure.vimeo.com/moogaloop.swf?clip_id=19546247&amp;server=vimeo.com&amp;show_title=0&amp;show_byline=0&amp;show_portrait=0&amp;color=388fc2&amp;fullscreen=0&amp;autoplay=0&amp;rel=0&amp;loop=0" />
+            <embed src="https://secure.vimeo.com/moogaloop.swf?clip_id=19546247&amp;server=vimeo.com&amp;show_title=0&amp;show_byline=0&amp;show_portrait=0&amp;color=388fc2&amp;fullscreen=0&amp;autoplay=0&amp;rel=0&amp;loop=0" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" width="720" height="405"></embed>
+          </object>
+        </div>	
+      </div>
+    </div>  
+  </div>
+</div>
+
+    </div>
+  </div>
+</div>
+<div style="clear: both;"></div>
+
+
+
+
+
+
+
+    
+<!-- OPTIMIZED FOOT -->
+<script src="%24widget2/lib.framework.withus/js/LIB.lib.framework.withus4e88.js?-485d6c4d"></script>
+<script src="%24widget2/lib.util.formatting.html/js/LIB.lib.util.formatting.html0c1b.js?46aefb22"></script>
+<script src="%24widget2/lib.ui.tree/js/LIB.lib.ui.treea2eb.js?-6f6bd2a5"></script>
+<script src="%24widget2/lib.ui.popup.win/js/LIB.lib.ui.popup.win2659.js?-e1f2067"></script>
+<script src="%24widget2/lib.ui.menu.menu_manager/js/LIB.lib.ui.menu.menu_managerc8f3.js?-956b826"></script>
+<script src="%24widget2/lib.framework.goo_keyboard/js/LIB.lib.framework.goo_keyboard1859.js?-40184006"></script>
+<script>
+$go = {}
+        $go.ignored = []
+var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-18915387-1']);
+  _gaq.push(['_setDomainName', '.orbs.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+G.ready( function(){
+    
+    function submitForm() {
+      $( 'login_form_uid_26cB7ZZO3PZpDTY9KDEA' ).submit();
+    }
+    
+		var menu = new G.MenuManager( $( 'login_outter' ), {
+			menuContent: $( 'login_dropdown_uid_26cB7ZZO3PZpDTY9KDEA' ),
+			alignmentElement: $( 'login_outter' ),
+			offset: { x: 0, y: 2 },
+      onOpen: function() {		
+        $( 'username_uid_26cB7ZZO3PZpDTY9KDEA' ).select();
+        $( 'username_uid_26cB7ZZO3PZpDTY9KDEA' ).focus();
+      }
+		} );
+
+		$( 'login_button_uid_26cB7ZZO3PZpDTY9KDEA' ).addEvent( 'click', function( e ) {
+			submitForm();
+		} );
+
+    // hotkeys for listening to 'enter' to submit the form
+    new G.Keyboard.HotKey( 'enter', submitForm, {
+      'target': 'username_uid_26cB7ZZO3PZpDTY9KDEA' 
+    } ).enable();
+    new G.Keyboard.HotKey( 'enter', submitForm, {
+      'target': 'password_uid_26cB7ZZO3PZpDTY9KDEA' 
+    } ).enable();
+    new G.Keyboard.HotKey( 'enter', submitForm, {
+      'target': 'keep_uid_26cB7ZZO3PZpDTY9KDEA' 
+    } ).enable();
+	} );
+G.ready( function(){
+   var searchFields = $$( '.go_search_form' );
+   
+    searchFields.addEvent( 'click', function( e ) {
+     e.target.set( 'value', '' );
+     $( e.target ).removeClass( 'search_field_faded' );
+    } );
+    
+   searchFields.each( function( searchField, index ) {
+    if( $( searchField ).get( 'value' ) !== 'Search...' ){
+      $( searchField ).removeClass( 'search_field_faded' );
+    }
+   } );
+} );
+window.addEvent( 'domready', function() {
+    function showHelpVideoPopup( e ) {
+      if( e ) { e.stop(); }
+      new StickyWin({
+        closeOnClickOut: true,
+        closeOnEsc: true,
+        destroyOnClose: true,
+        allowMultiple: true,
+        useIframeShim: true,
+        showNow: true,
+        content: $( 'a5298c9df34bc071b2d0000f2' ).innerHTML,
+        getWindowManager: $empty
+      });
+    };
+
+
+  });
+window.addEvent('domready', function() {
+    var data = ["Home",[["Research",[]],["Curriculum Vitae",[]],["Other Activities",[]],["Astronomy Resources",[]],["Design",[]],["IDL Tips",[["Run an IDL script at startup",[]],["Emulate linspace and logspace",[]]]],["UNIX Tips",[["Timing a program from the shell",[]],["Customizing vim",[]],["Checksums",[]]]],["High-Performance Computing",[["Running FLASH on SciNet",[]]]],["Python",[["Plotting with Python",[]]]],["Links",[]]]];
+    var current = "UNIX Tips";
+    var home_name = "Home";
+    var editable = false;
+    var saveUrl = "/%7Eajax/save_tree";
+    var maxLevel = 9;
+    var maxLevelMessage = "Your Table of Contents can't be\u003Cbr\u003Emore than 9 levels deep.";
+    var highlight = false;
+    
+		var breadCrumb = new G.Tree.BreadCrumb( $$( ".bread_crumb" ) );
+		var memorizedTreeState = ["Home","UNIX Tips"];
+    var stored = true;
+    var pageName = "UNIX Tips";
+    var ubarTransparencies = $$( '.ubar_transparency' );
+    // IE7- do not implement z-index correctly. They start a new layer stack
+    // for each relatively positioned element. To fix this, we move the
+    // transparencies under the body.
+    if( Browser.Engine.trident && Browser.Engine.version === 5 ) {
+      ubarTransparencies.inject( document.body );
+    }
+    ubarTransparencies.addEvent( 'click', function() {
+      wiki_editor.cancel();
+    } );
+    
+    Page = {
+      tree: new G.Tree({
+        data: data,
+        saveUrl: saveUrl,
+        maxLevel: maxLevel,
+        startExpanded: false,
+        expandedChildren: memorizedTreeState,
+        onLevelTooDeep: function( toEl ) {
+          new G.Alert( maxLevelMessage, {
+        		'relativeTo': toEl,
+        		'edge': 'rightBottom',
+        		'position': 'rightTop',
+            // Align with the sidebar buttons
+            'offset': { x: 50, y: 0 }
+          });
+        },
+        onAfterMove: function( self ) {
+  				breadCrumb.set( self.pathToChild( current ) );
+        }      
+      }),
+      isStored: stored,
+      onEditorSavePage: function(editor, response){
+        if (!Page.isStored) {
+          if (response.success === true) {
+            var controller = Page.tree.addNode( pageName );
+            controller.getView().setAsCurrent();
+            controller.highlightNodeAndFade(0);
+            Page.isStored = true;
+            breadCrumb.set(Page.tree.pathToChild( current ));
+          }
+        }
+      },
+      onEditorBeforeSnapFocusShow: function() {
+        ubarTransparencies.show();
+      },
+      onEditorAfterSnapFocusHide: function() {
+        ubarTransparencies.hide();
+      }
+    };
+
+    // show tree and destroy the pre rendered tree
+    var treeContainer = $( 'js_tree_container' );
+    treeContainer.adopt( Page.tree.getRootController().getContainer() );
+    treeContainer.show();
+    $('pre_rendered_tree_container').destroy();
+    
+    // if we're on the home page, set it as current, otherwise whatever page
+    // that is current
+    if ( current === home_name ) {
+      Page.tree.getRootController().getView().setAsCurrent( highlight );
+      Page.tree.getRootController().expandChildren();
+    } else if ( Page.isStored ) {
+      Page.tree.expandToChild( current, highlight );
+    }
+    if ( editable ) { Page.tree.activateDrag(); }
+    if( $defined( $( 'save_tags' ) ) ) {
+      $( 'save_tags' ).addEvent( 'click', function( e ){
+        var tags_save_url = "/%7Eajax/save_tags/UNIX+Tips";
+        var tags = $( 'tags' ).get( 'value' );
+        var request = new Request.JSON({
+            method: 'post',
+            data: {
+              tags: tags
+            },
+            url: tags_save_url,
+            onSuccess: function( json ) {
+              if( json[ 'success' ] ) {
+                $( 'save_tag_message' ).
+                set( 'html', '<span style="color: green;">Saved.</span>' )
+              } else {
+                $( 'save_tag_message' ).
+                set( 
+                  'html', 
+                  '<span style="color: red;">Not Saved. {message}</span>'.
+                    substitute( {message: json[ 'issue' ]} ) 
+                )
+                  
+              }
+            }
+          }).send();
+      } );
+    }
+  });
+</script>
+<!-- END OPTIMIZED FOOT -->
+  </body>
+
+<!-- Mirrored from klassenresearch.orbs.com/UNIX+Tips by HTTrack Website Copier/3.x [XR&CO'2010], Fri, 29 Nov 2013 17:11:30 GMT -->
+</html>

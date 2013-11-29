@@ -1,0 +1,1080 @@
+* {
+	margin: 0;
+}
+
+/* Reset */
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+	margin:0;
+	}
+
+td {
+	padding: 0px;
+	vertical-align: top;
+}
+
+fieldset,img { 
+	border:0;
+	/* added these two for sake of fieldset */
+	padding:0;
+	margin:0;
+	}
+
+address,caption,cite,code,dfn,th,var {
+	font-style:normal;
+	font-weight:normal;
+	}
+
+ol,ul {
+	margin-left: 0;
+  padding-left: 30px;
+	}
+
+caption,th{
+	text-align:left;
+	vertical-align: top;
+	}
+
+h1,h2,h3,h4,h5,h6 {
+	font-size:100%;
+	font-weight:normal;
+	}
+
+q:before,q:after {
+	content:'';
+	}
+
+abbr,acronym { 
+	border:0;
+	}
+	
+/* Base Styles */
+
+h1 {
+	font-size:26px;
+	color: #333;
+	}
+
+h2 {
+	font-size:18px;
+	color: #333;
+	}
+h3 {
+	font-size:16px;
+	color: #333;
+	}
+	
+/* alignment helpers */
+
+.left { text-align: left; }
+.center { text-align: center; }
+.right { text-align: right; }
+
+.top { vertical-align: top; }
+.middle { vertical-align: middle; }
+.bottom { vertical-align: bottom; }
+
+/* layout helpers */
+
+/* .text_middle { vertical-align: middle; display: inline-block; } */
+.block_center { margin-left: auto; margin-right: auto; }
+.float-left { float: left; }
+.float-right { float: right }
+/*.inline_middle { vertical-align: middle; display: inline-block; } */
+
+
+.icon {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  position: relative;
+	vertical-align: bottom;
+}
+
+
+/* helper shortcuts */
+.tp { margin-top: 2px; }
+.ts { margin-top: 5px; }
+.tm { margin-top: 15px; }
+.tl { margin-top: 25px; }
+
+.bp { margin-bottom: 2px; }
+.bs { margin-bottom: 5px; }
+.bm { margin-bottom: 15px; }
+.bl { margin-bottom: 25px; }
+
+/* Prefer to use .rs, .rm and .rl. Only uncomment if there is a good use case.
+.ls { margin-left: 5px; }
+.lm { margin-left: 10px; }
+.ll { margin-left: 20px; }
+*/
+
+.rs { margin-right: 5px; }
+.rm { margin-right: 10px; }
+.rl { margin-right: 20px; }
+
+.none { display: none; }
+
+
+/* top margin helpers */
+
+.t1 { margin-top: 1px; }
+.t2 { margin-top: 2px; }
+.t3 { margin-top: 3px; }
+.t4 { margin-top: 4px; }
+.t5 { margin-top: 5px; }
+.t10 { margin-top: 10px; }
+.t15 { margin-top: 15px; }
+.t20 { margin-top: 20px; }
+.t25 { margin-top: 25px; }
+.t30 { margin-top: 30px; }
+.t40 { margin-top: 40px; }
+.t50 { margin-top: 50px; }
+
+/* bottom margin helpers */
+
+.b1 { margin-bottom: 1px; }
+.b2 { margin-bottom: 2px; }
+.b3 { margin-bottom: 3px; }
+.b4 { margin-bottom: 4px; }
+.b5 { margin-bottom: 5px; }
+.b5 { margin-bottom: 5px; }
+.b10 { margin-bottom: 10px; }
+.b15 { margin-bottom: 15px; }
+.b20 { margin-bottom: 20px; }
+.b25 { margin-bottom: 25px; }
+.b30 { margin-bottom: 30px; }
+.b40 { margin-bottom: 40px; }
+
+
+
+/* padding helpers */
+
+.pl { padding-left: 0px !important; } /* flush left, no left padding */
+.pr { padding-right: 0px !important; } /* flush right, no right padding */
+
+/* debug */
+
+table.ggb td { border: 1px dashed red !important; } 
+.ggb { border: 1px dashed red !important; }
+.ggh { background: yellow !important; }
+
+
+/* top padding helpers */
+
+
+
+/*
+.pt1 { padding-top: 1px; }
+.pt2 { padding-top: 2px; }
+.pt3 { padding-top: 3px; }
+.pt4 { padding-top: 4px; }
+.pt5 { padding-top: 5px; }
+.pt10 { padding-top: 10px; }
+.pt15 { padding-top: 15px; }
+.pt20 { padding-top: 20px; }
+.pt25 { padding-top: 25px; }
+
+*/
+/* IE6 hack for preventing fixed positioning from jumping */
+* html {     
+  background-image: url(../box/assets/transparent.gif);
+}
+
+.wu_hotkey {
+  text-decoration: underline;
+}
+
+body, th, td {
+	font: 13px Arial, Tahoma, sans-serif;
+	color: #333;
+}
+
+/* New Ones! */
+
+  /* TODO-WW: confirm that this is the correct place */
+  .wu_formatted_edit_cursor {
+    cursor: url(../box/assets/edit_cursor_small.cur), default;
+  }
+
+  div.wu_title {
+  	padding: 3px 0px;
+  }
+
+  span.wu_title {
+    color: #333333;
+		font-size: 16px;
+  }
+
+	.wu_heading {
+		font: bold 16px arial;
+	}
+	.wu_subheading {
+		font: italic 13px arial;
+		color: #999999;
+	}
+	
+	td.wu_lined {
+		border-top: 1px solid #F0F0F0;
+		border-bottom: 1px solid #F0F0F0;
+		padding: 10px;
+	}
+	
+	td.wu_lined_flush_left {
+		padding-left: 0px;
+	}
+	
+	table.wu_lined td.wu_lined_flush_right {
+		padding-left: 0px;
+	}
+	
+	.wu_section_block {
+		margin-bottom: 30px;
+	}
+	
+	.wu_border {
+		border: 1px solid black;
+	}
+	
+	.wu_divider {
+		margin: 0px 5px;
+		color: #999;
+	}	
+	
+	/* Links */
+	
+	.wu_link,
+	.wu_link_fresh,
+	.wu_link_dim,
+	.wu_link_cancel {
+		cursor: pointer;
+		text-decoration: underline;
+	}
+	
+	/* Formatting for links and makes a span look like a link. */
+	
+  .wu_link, .wu_link_fresh, .wu_fresh {
+    color: #449500;
+  }
+
+  .wu_link_dim,
+	.wu_link_cancel {
+    color: #A0A0A0;
+  }
+	
+	.wu_link_cancel {
+		display: inline-block;
+		padding-top: 5px;
+	}
+
+  /*
+  .wu_link_fresh {
+    color:#0000CC;
+  }
+  */
+	
+  .wu_link:hover,
+  .wu_link_dim:hover,
+  .wu_link_cancel:hover,
+	.wu_link_fresh:hover {
+    color: #449500;
+  }
+
+  .wu_link:visited {
+    color: #A0A0A0;
+  }
+
+  /*
+  .wu_cancel_link {
+  	padding-top: 5px;
+  	color: #A0A0A0;
+  }
+  */
+	
+	/*
+  .wu_link:hover, .wu_cancel_link:hover {
+  	color: #0066CC;
+  }
+  */
+	
+	/*
+	.wu_fresh_link, .wu_link_fresh {
+		color:#0066CC;
+	}
+	*/
+
+
+/* ICON */
+
+	/* icon must be a <span> or <img>. The <div> does not work on MSIE */
+	img.wu_icon, span.wu_icon {
+	  width: 16px;
+	  height: 16px;
+	  display: inline-block;
+	  position: relative;
+	  vertical-align: bottom;
+	}
+
+
+/* Panel New */
+
+/*
+  .wu_panel {
+    border: 1px solid #808080;
+    background: #F0F0F0;
+    margin-bottom: 10px;
+  }
+  .wu_panel_hd {
+    font: 11px courier new;
+    letter-spacing: 2px;
+    color: #999999;
+    padding: 4px 8px;
+  }
+  .wu_panel_bd {
+    margin: 0px 5px 5px 5px;
+    background: white;
+    padding: 10px;
+    font: 12px arial;
+		color: #404040;
+  }
+  .wu_panel_ft {
+    font: 11px arial;
+    color: #999999;
+    padding: 2px 5px 6px;
+  }
+*/	
+
+/* COMMAND BUTTONS */
+  .wu_command, .wu_command_dim, div.wu_formatted a.wu_command,  div.wu_formatted a.wu_command_dim {  	/* added the wu_formatted ones so that the buttons would still look OK inside wu_formatted blocks */
+    font: 11px tahoma, arial;
+    color: white;
+    padding: 1px 3px;
+    text-decoration: none;
+    cursor: pointer;
+	}	
+	
+	/* default command */
+  .wu_command {
+		background: #125da8;
+  }
+  .wu_command:hover {
+  	background: #4080C0;
+  }
+	
+	/* dim command */
+  .wu_command_dim {
+    background: #6080A0;
+  }
+	.wu_command_dim:hover {
+    background: #4080C0;
+  }
+
+
+/* Headings */
+
+	.wu_h1 {
+		font: bold 24px arial;
+		color: black;
+	}
+
+/* Styling */
+
+	.wu_dim {
+		color: gray;
+	}
+	
+/* Boxes */
+
+	.wu_box {
+		background: #EAF3FD;
+		border: 1px solid #DAE3ED;
+		padding: 15px 15px;
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 10px;
+	}
+	
+	.wu_box_nested {
+		background: #D9E9FB;
+		border: 1px solid #DAE3ED;
+		padding: 10px;
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 10px;
+	}
+
+	.wu_box_yellow{
+		background: #fbf6bf;
+		border: 1px solid #f4e21d;
+		padding: 15px 15px;
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 10px;
+	}
+	
+	.wu_box_gray{
+			background: #f1f1f1;
+			border: 1px solid #dedede;
+			padding: 1px 15px;
+			-moz-border-radius: 10px;
+			-webkit-border-radius: 10px;
+		}
+			
+/* Form Elements */
+
+  /* This works because the inputs take 100% to mean that the inner part of
+   * the input box is 100%. To fake it out, we make the inner part smaller
+   * by the amount of the padding and the border of the input.
+   */
+	
+	/*
+	div.wu_input_text,
+	div.wu_input_title {
+    padding-right: 6px;
+  }
+  */
+
+  input.gradiented {
+    background: #FFFFFF url(../box/assets/input_gradient.png) repeat-x top left;
+  }
+
+  input.wu_input_title {
+    font: 20px Arial, Helvetica, sans-serif;
+    padding: 2px 4px;
+  }
+  /*
+	input.wu_input_text {
+		font: 13px Arial, Helvetica, sans-serif;
+		padding: 1px;
+	}
+	*/
+	/* textarea */
+	/* Textarea must be embedded in
+	 * 
+	 *   <fieldset><div class="wu_textarea"><textarea class="wu_textarea">
+	 * 
+	 * to work in all browsers.
+	 * 
+	 * 1. Fieldset is needed to fix a bug in msie which makes the div/input expand
+	 *    too wide.
+	 *    
+	 *    http://www.webmasterworld.com/css/3304306.htm
+	 * 
+	 * 2. reset.css removes padding, margins, etc. from fieldset in firefox.
+	 * 
+	 * 3. zoom: 1 is needed to switch msie to "layout" mode.
+	 *    This fixes the bug where the scrollbar jumps to the right after doing
+	 *    some editing.
+	 * 
+	 * 4. padding 0px on right makes the scrollbar look normal while still giving
+	 *    us some space on the left. Padding on top/bottom looks okay due to
+	 *    font spacing. padding on left needed to make spacing look okay.
+	 * 
+	 * 5. background: white needed to fake the textarea box. The selection looks
+	 * 		funny in some browsers but its the best we can do.
+	 * 
+	 */
+	
+	/*
+	div.wu_textarea {
+		zoom: 1;
+		border:1px solid #A8C8E8;
+		padding:0px 0px 0px 2px;
+		background: white;
+	}
+	
+	textarea.wu_textarea {
+		border: 0px none;
+		padding: 0px;
+		font: 13px arial;
+		width: 100%;
+		height: 100%;
+	}
+	*/
+	
+	/* Too many hacks */
+	
+	/* set width of textearea to 10px less than desired width */
+	
+	textarea.wu_textarea {
+		padding: 4px;
+		font: 13px arial;
+	}
+	
+	
+	/*
+	 
+	Original version:
+	
+	div.wu_textarea {
+    padding-right: 6px;
+	}
+	
+	textarea.wu_textarea {
+    font: 13px Arial, Helvetica, sans-serif;
+		padding: 2px;
+		border: 1px solid #A8C8E8;
+	}
+	*/
+
+	/* indented checkbox */
+	div.wu_checkbox {
+		padding-left: 15px;
+		text-indent: -15px;
+	}
+	input.wu_checkbox {
+    width: 13px;
+    height: 13px;
+    padding: 0;
+    margin:0;
+    vertical-align: bottom;
+    position: relative;
+    top: -1px;
+	}
+	
+	select.wu_select {
+		border: 1px solid;
+	}
+
+/* Buttons */
+
+  .wu_button {
+    
+  }
+
+/* blue button with bg#FFF */
+  .wu_button_blue_bgfff {
+	cursor:pointer;
+	background:url(../box/assets/button_blue_bgfff.png) transparent no-repeat right top;
+	line-height:36px;
+	height: 36px; /* need this for IE6 */
+	padding-right:12px;
+	display:inline-block;
+	border: none;
+  }
+
+  a.wu_button_blue_bgfff,
+	form a.wu_button_blue_bgfff  {
+  color:white;
+	text-decoration:none;
+  }
+
+  .wu_button_blue_bgfff span{
+  background:url(../box/assets/button_blue_bgfff.png) no-repeat left top;
+	line-height:36px;
+	height: 36px;	/* need this for IE6 */
+	padding-left:12px;
+	display:inline-block;
+  }
+
+  a.wu_button_blue_bgfff:hover {
+    background-position:right -36px;
+  }
+
+  a.wu_button_blue_bgfff:hover span {
+    background-position:left -36px;
+  }
+/* blue button with bg#FFF short 28px */
+  .wu_button_blue_bgfffshort {
+		cursor:pointer;
+		background:url(../box/assets/button_blue_bgfffshort.png) transparent no-repeat right top;
+		line-height:28px;
+		height: 28px; /* need this for IE6 */
+		padding-right:12px;
+		display:inline-block;
+		border: none;
+  }
+
+  a.wu_button_blue_bgfffshort {
+	  color:white;
+		text-decoration:none;
+  }
+
+  .wu_button_blue_bgfffshort span{
+	  background:url(../box/assets/button_blue_bgfffshort.png) no-repeat left top;
+		line-height:28px;
+		height: 28px; /* need this for IE6 */		
+		padding-left:12px;
+		display:inline-block;
+  }
+
+  a.wu_button_blue_bgfffshort:hover {
+    background-position:right -28px;
+  }
+
+  a.wu_button_blue_bgfffshort:hover span {
+    background-position:left -28px;
+  }	
+
+/* blue button with bg#000 short 28px*/
+  .wu_button_blue_bg000short{
+		cursor:pointer;
+		background:url(../box/assets/button_blue_bg000short.png) no-repeat right top;
+		line-height:28px;
+		padding-right:12px;
+		display:inline-block;
+		border: none;	
+  }
+
+  a.wu_button_blue_bg000short{
+    color:black;
+	text-decoration:none;
+  }
+
+  .wu_button_blue_bg000short span{
+    background:url(../box/assets/button_blue_bg000short.png) no-repeat left top;
+		line-height:28px;
+		padding-left:12px;
+		display:inline-block;
+  }
+
+  a.wu_button_blue_bg000short:hover{
+    background-position:right -28px;
+  }
+
+  a.wu_button_blue_bg000short:hover span {
+    background-position:left -28px;
+  }
+
+/* blue button with bg#000 */
+  .wu_button_blue_bg000 {
+	  cursor:pointer;
+		background:url(../box/assets/button_blue_bg000.png) no-repeat right top;
+		line-height:36px;
+		padding-right:12px;
+		display:inline-block;
+		border: none;	
+  }
+
+  a.wu_button_blue_bg000 {
+	  color:white;
+		text-decoration:none;
+  }
+
+  .wu_button_blue_bg000 span{
+	  background:url(../box/assets/button_blue_bg000.png) no-repeat left top;
+		line-height:36px;
+		padding-left:12px;
+		display:inline-block;
+  }
+
+  a.wu_button_blue_bg000:hover {
+    background-position:right -36px;
+  }
+
+  a.wu_button_blue_bg000:hover span {
+    background-position:left -36px;
+  }
+
+/* orange button with bg#FFF */
+  .wu_button_orange_bgfff {
+    cursor:pointer;
+		background:url(../box/assets/button_orange_bgfff.png) no-repeat right top;
+		line-height:36px;
+		padding-right:12px;
+		display:inline-block;
+		border: none;	
+  }
+
+  a.wu_button_orange_bgfff {
+    color:white;
+		text-decoration:none;
+  }
+
+  .wu_button_orange_bgfff span{
+    background:url(../box/assets/button_orange_bgfff.png) no-repeat left top;
+		line-height:36px;
+		padding-left:12px;
+		display:inline-block;
+  }
+
+  a.wu_button_orange_bgfff:hover {
+    background-position:right -36px;
+  }
+
+  a.wu_button_orange_bgfff:hover span {
+    background-position:left -36px;
+  }
+	
+/* orange button with bg#000 */
+  .wu_button_orange_bg000 {
+    cursor:pointer;
+	cursor:hand;
+	background:url(../box/assets/button_orange_bg000.png) no-repeat right top;
+	line-height:36px;
+	height:36px;
+	padding-right:12px;
+	display:inline-block;
+	border: none;	
+  }
+
+  a.wu_button_orange_bg000 {
+    color:black;
+	text-decoration:none;
+  }
+
+  .wu_button_orange_bg000 span{
+    background:url(../box/assets/button_orange_bg000.png) no-repeat left top;
+	line-height:36px;
+	height:36px;
+	padding-left:12px;
+	display:inline-block;
+  }
+
+  a.wu_button_orange_bg000:hover {
+    background-position:right -36px;
+  }
+
+  a.wu_button_orange_bg000:hover span {
+    background-position:left -36px;
+  }
+
+/* orange button with bg#000 short 28px*/
+  .wu_button_orange_bg000short {
+   cursor:pointer;
+	cursor:hand;
+	background:url(../box/assets/button_orange_bg000short.png) no-repeat right top;
+	line-height:28px;
+	height: 28px;	
+	padding-right:12px;
+	display:inline-block;
+	border: none;	
+  }
+
+  a.wu_button_orange_bg000short {
+    color:black;
+	text-decoration:none;
+  }
+
+  .wu_button_orange_bg000short span{
+    background:url(../box/assets/button_orange_bg000short.png) no-repeat left top;
+	line-height:28px;
+	height: 28px;
+	padding-left:12px;
+	display:inline-block;
+  }
+
+  a.wu_button_orange_bg000short:hover {
+    background-position:right -28px;
+  }
+
+  a.wu_button_orange_bg000short:hover span {
+    background-position:left -28px;
+  }
+  
+  .wu_text_orange{
+  	color: #ffb700
+  	}
+
+/* gray button with bg#FFF */
+  .wu_button_gray_bgfff {
+    cursor:pointer;
+	cursor:hand;
+	background:url(../box/assets/button_gray_bgfff.png) no-repeat right top;
+	line-height:36px;
+	padding-right:12px;
+	display:inline-block;
+	border: none;	
+  }
+	
+	a.wu_button_gray_bgfff,
+  form a.wu_button_gray_bgfff {
+    color:white;
+	text-decoration:none;
+  }
+
+  .wu_button_gray_bgfff span{
+    background:url(../box/assets/button_gray_bgfff.png) no-repeat left top;
+	line-height:36px;
+	padding-left:12px;
+	display:inline-block;
+  }
+
+  a.wu_button_gray_bgfff:hover {
+    background-position:right -36px;
+  }
+
+  a.wu_button_gray_bgfff:hover span {
+    background-position:left -36px;
+  }
+	
+/* gray button with bg#000 */
+  .wu_button_gray_bg000 {
+    cursor:pointer;
+	cursor:hand;
+	background:url(../box/assets/button_gray_bg000.png) no-repeat right top;
+	line-height:36px;
+	height:36px;
+	padding-right:12px;
+	display:inline-block;
+	border: none;	
+  }
+
+  a.wu_button_gray_bg000 {
+    color:white;
+	text-decoration:none;
+  }
+
+  .wu_button_gray_bg000 span{
+    background:url(../box/assets/button_gray_bg000.png) no-repeat left top;
+	line-height:36px;
+	height:36px;	
+	padding-left:12px;
+	display:inline-block;
+  }
+
+  a.wu_button_gray_bg000:hover {
+    background-position:right -36px;
+  }
+
+  a.wu_button_gray_bg000:hover span {
+    background-position:left -36px;
+  }
+
+/* gray button with bg#000 short 28px*/
+  .wu_button_gray_bg000short {
+	cursor:hand;
+	background:url(../box/assets/button_gray_bg000short.png) no-repeat right top;
+	line-height:28px;
+	padding-right:12px;
+	display:inline-block;
+	border: none;	
+  }
+
+  a.wu_button_gray_bg000short {
+  color:white;
+	text-decoration:none;
+  }
+
+  .wu_button_gray_bg000short span{
+  background:url(../box/assets/button_gray_bg000short.png) no-repeat left top;
+	line-height:28px;
+	padding-left:12px;
+	display:inline-block;
+  }
+
+  a.wu_button_gray_bg000short:hover {
+    background-position:right -28px;
+  }
+
+  a.wu_button_gray_bg000short:hover span {
+    background-position:left -28px;
+  }
+	
+/* gray button with bg#FFF tiny 23px*/
+  .wu_button_gray_bgffftiny {
+	cursor:hand;
+	background:url(../box/assets/button_gray_bgffftiny.png) no-repeat right top;
+	/* line-height:23px; */
+	height: 23px;
+	padding-right:5px;
+	display:inline-block;
+	border: none;
+  }
+
+  a.wu_button_gray_bgffftiny {
+  color:white;
+	text-decoration:none;
+  }
+
+  .wu_button_gray_bgffftiny span{
+  background:url(../box/assets/button_gray_bgffftiny.png) no-repeat left top;
+	/* line-height:23px; */
+	height: 23px;	
+	padding-left:5px;
+	display:inline-block;
+  }
+
+  a.wu_button_gray_bgffftiny:hover {
+    background-position:right -23px;
+  }
+
+  a.wu_button_gray_bgffftiny:hover span {
+    background-position:left -23px;
+  }
+
+	/* 
+  .wu_button {
+    background: #125da8;
+    border: 0px solid black;
+    color: white;
+    padding: 4px 10px;
+    font: 13px arial;
+		text-decoration: none;
+		border: none;
+  }
+	
+  .wu_button:hover {
+    background: #4080C0;
+		text-decoration: none;		
+  }
+	
+	/* align some inline text to a button */
+
+
+	.wu_button_inline {
+		display: inline-block;
+		vertical-align: bottom;
+    padding-bottom:3px;	
+	}
+	/*
+	.wu_button {
+		color: white;
+		background: #0066CC;
+		-moz-border-radius: 6px;
+		-webkit-border-radius: 6px;
+		border: 1px solid black;
+		border: 0px none;
+		padding: 5px 10px;
+	}
+	*/
+
+	/* This button should not be the main submission button. It can be used for
+	 * things like validating a part of a form like checking the uniqueness of
+	 * a username.
+	 */
+	/*
+	.wu_small_button {
+		font:11px tahoma,arial;
+	}
+	*/
+
+/* Lists */
+
+.wu_ol_decimal {
+	list-style: decimal outside; 
+	font-size: 24px; 
+	font-weight: bold; 
+	color:#76af1c;
+}
+
+
+/* Messages, Issues, Notices */
+
+div.go_messages {
+	padding: 14px;
+	margin-top: 20px;
+  border-width: 2px;
+  border-style: solid;
+  margin-bottom: 10px;
+}
+.wu_admin_main_inner div.go_messages {
+	margin-top: 0;
+}
+
+div.go_issues {
+	border-color: #ffe955;
+	background: #fffcc4 url( ../box/assets/fmessages_icon_yellow.png) no-repeat 17px 18px;  
+}
+
+div.go_notices {
+	border-color: #c6e4a9;
+	background: #def1ca url( ../box/assets/fmessages_icon_green.png) no-repeat 17px 18px;  
+}
+
+div.go_message {
+	font-family: arial,verdana;
+	font-size: 14px;
+	line-height: 20px;
+	margin: 5px;
+	padding: 4px 40px;
+	font-weight: normal;
+}
+
+div.go_notice{
+	color: #4d8416;
+}
+
+div.go_issue {
+	color:#a29500;
+}
+
+.wu_inline_issue {
+	background: url(../box/assets/error.gif) no-repeat;
+	padding-left: 20px;
+	color: #CC0000;
+}
+.wu_inline_tick {
+	background: url(../box/assets/tick.gif) no-repeat;
+	padding-left: 20px;
+	color: #006600;
+}
+
+/* GRID */
+/* Used for displaying grids of information as in a table. Good for
+ * displaying rows of data.
+ * 
+ * <table class="wu_grid">
+ *   <tr><th class="wu_grid">heading</th></tr>
+ *   <tr><td class="wu_grid">content</td></tr>
+ * </table>
+ */
+div.wu_grid {
+  border-top: 1px solid #A0B0C0;
+  border-bottom: 1px solid #A0B0C0;
+}
+
+table.wu_grid {
+	/* border-top: 1px solid #8090A0; */
+}
+
+td.wu_grid, th.wu_grid {
+	border-bottom: 1px solid #E8F0F0;
+	padding: 5px 5px;
+	font: 13px arial;
+}
+
+th.wu_grid {
+	font: 12px arial;
+	color: #708090;
+	background: #CCDDEE;
+  padding: 2px 5px 2px;
+}
+
+/* PAGINATION */
+
+div.wu_pg {
+	font: 12px Arial, Tahoma, sans-serif;
+	padding: 2px 0px;
+}
+.wu_pg_box, .wu_pg_box_dim, .wu_pg_box_current {
+	border: 1px solid #DDD;
+	padding: 1px 4px;
+	text-decoration: none;
+	color: #4080C0;
+}
+.wu_pg_box:hover {
+	color: white;
+	background: #ccc;
+	border-color: #AAA;
+}
+.wu_pg_box_dim {
+	color: #BBB;
+}
+.wu_pg_box_current {
+	border: 0px solid white;
+	font-weight: bold;
+	color: #444444;
+}
+
+/* SPINNER */
+
+.wu_spinner {
+	background: url(../box/assets/spinner.gif) no-repeat 0px 0px;
+	padding: 1px;
+}
+
+/* ALERT DIALOG */
+
+.g_standard_alert {
+  background: #000000 url( ../box/assets/alert_gradient.png) repeat-x top left;
+  color: white;
+}
+
+/* PROMPT DIALOG */
+
+.g_standard_prompt {
+  background: #000000 url( ../box/assets/alert_gradient.png) repeat-x top left;
+  color: white;
+}
+.g_standard_prompt .cancel_button {
+  margin-left: 6px;
+}

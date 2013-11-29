@@ -1,0 +1,123 @@
+/* TODO-WW: Remove this when not needed */
+.wu_edit_cursor {
+    cursor: url(../box/assets/text_edit.html), default;
+}
+
+/* FLOAT & ALIGNMENT */
+.wu_formatted .float_left {
+  float: left;
+	margin: 5px 10px 5px 1px;
+}
+.wu_formatted .float_right {
+    float: right;
+	margin: 5px 1px 5px 10px;	
+}
+.wu_formatted .left_align {
+    text-align: left;
+	margin: 5px 1px;
+}
+.wu_formatted .center_align {
+    text-align: center;
+	margin: 5px 1px;
+}
+.wu_formatted .right_align {
+    text-align: right;
+	margin: 5px 1px;	
+}
+
+/* IMAGES */
+.wu_formatted img{
+	border: none;
+}
+.wu_formatted img.highlight{
+  border: dashed 1px black;
+  margin: -1px;
+}
+.wu_formatted img.highlight.float_right{
+  margin: 4px 0px 4px 9px;
+  border: dashed 1px black;
+}
+.wu_formatted img.highlight.float_left{
+  margin: 4px 9px 4px 0px;
+  border: dashed 1px black;
+}
+
+/* TEXT */
+.wu_formatted, .wu_formatted h1, .wu_formatted h2, 
+.wu_formatted h3, .wu_formatted p {
+	word-wrap: break-word;	
+}
+.wu_formatted h1:first-child, .wu_formatted h2:first-child, .wu_formatted h3:first-child {
+	line-height: normal;
+}
+
+/* TABLES */
+.wu_formatted table {
+	border-collapse: collapse;
+	width: 99%;	
+	margin: 1px;
+	line-height: 1.5;
+}
+.wu_formatted table th {
+	border: 1px solid #CBCBCB;	
+    font-weight: bold;
+    text-align: center;
+	word-wrap: break-word; 
+}
+.wu_formatted table th p {
+	margin: 0;
+	word-wrap: break-word;		
+}
+.wu_formatted table td {
+	border: 1px solid #CBCBCB;
+	font: 13px Arial, Helvetica, sans-serif;
+	padding: 2px 4px;
+	word-wrap: break-word;	
+}
+.wu_formatted table td p, 
+.wu_formatted .blockquote p,
+.wu_formatted .code p {
+	margin-top: 0;
+	word-wrap: break-word;		
+}
+.wu_formatted .blockquote p,
+.wu_formatted .code p {
+	margin-bottom: 0;
+}
+
+/* BLOCKQUOTES & CODES */
+.wu_formatted blockquote {
+	margin-left: 30px;
+}
+.wu_formatted .blockquote {
+    border-left: 3px solid #f0f0f0;
+    margin-right: 10px;
+    padding: 10px 10px 10px 20px;
+    word-wrap: break-word;
+}
+.wu_formatted .code {
+    background: #f7f7f7;
+    margin-right: 10px;
+    font-family: monospace;
+    padding: 10px;
+    word-wrap: break-word;
+}
+
+/* LINKS */
+.wu_formatted .post_title a, .wu_formatted .post_title a:link, .wu_formatted .post_title a:visited{
+	text-decoration: none;
+}
+.wu_formatted a, .wu_formatted a:link, .wu_formatted a:visited{
+	text-decoration: underline;
+}
+.wu_formatted a:hover, .wu_formatted a:active{
+	text-decoration: underline;	
+}
+
+/* LISTS */
+.wu_formatted ul li{
+	list-style-type: disc;
+}
+.wu_formatted ol li{
+	list-style: decimal;
+}
