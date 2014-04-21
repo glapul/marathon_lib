@@ -28,7 +28,21 @@ void init()
     errors[7]="Commands limit reached, forcing waiting.";
     errors[8]="Internal server error.";
     errors[9]="No current round.";
+    errors[10]="No more bonuses to find";
+    errors[101] = "Not suff. money to process recruitment";
     errors[444]="Logging in failed. Consider terminating the program";
+}
+vector<vector<int> > parsuj(vector<vector<string> > p)
+{
+    vector<vector<int > > res;
+    for(int i=0;i<p.size();i++)
+    {
+        vector<int> tmp;
+        FOREACH(j,p[i])
+            tmp.pb(stoi(*j));
+        res.pb(tmp);
+    }
+    return res;
 }
 vector<string> split(string x, char splitter= ' ')
 {
@@ -64,14 +78,6 @@ void wait()
     cerr << "done\n";
 
 }
-string kto_idzie_po_zarcie()
-{
-    return "kaszuba";
-}
-int get_pachocki_debiak_cygan_place()
-{
-    return 1;
-}
 void connect(string ADDRESS, int PORT, string LOGIN, string PASSWORD)
 {
     init();
@@ -100,6 +106,7 @@ void send_message(string x)
         cout <<x<<endl;
         string tmp;
         getline(cin,tmp);
+        cerr<<x<<endl;
         if(tmp!="OK")
         {
             vector<string> ss = split(tmp);
@@ -110,7 +117,8 @@ void send_message(string x)
     {
         switch(e.first)
         {
-            case 6 :    send_message(x);
+            case 6 :    wait();
+                        send_message(x);
                         break;
             case 7 :    send_message(x);
                         break;

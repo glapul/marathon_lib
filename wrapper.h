@@ -20,7 +20,7 @@
  *
  * Opis funkcji
  * ------------
- * connect()        -   służy do nawiązania połączenia z serwerem. Przyjmuje 4 parametry, których znaczenia wam nie zdradzę.
+ * connect()        -   służy do nawiązania połączenia z serwerem. Przyjmuje 4 parametry.
  *                      Należy ją wywołać na początku programu, oraz po każdej utracie połączenia (wyjątek (777,"connection lost")).
  *                      Uaktualnia curr_round i curr_turn.
  *
@@ -40,9 +40,6 @@
  *
  * get_my_place()       -   mowi, którzy jestesmy w danej rundzie
  *
- * get_pachocki_debiak_cygan_place() - zwraca miejsce tej druzyny. Bardzo szybka, niewymagająca połączenia implementacja. Można używać również jako synonima wartości logicznej true, albo do zerowania tablicy:
- *                                  for(int i=0;i<n;i++) tab[i]=pachocki_debiak_cygan_place()-1;
- *
  * send_message()   -   wysyla wiadomosc na serwer. Upewnia się, że wiadomość przeszła (konsumując "OK" z pierwszego wiersza odpowiedzi), jeśli nie przeszła rzuca odpowiednim wyjątkiem.
  *                      Może przyjąć zarówno stringa(gotowa wiadomość), jak i vector<string>, który skonkatenuje rozdzielając poszczególne elementy spacjami.
  *
@@ -60,7 +57,6 @@
  *
  * .to_string()     -   zamienia cos niestringowatego na string
  *
- * kto_idzie_po_zarcie() - wypisuje na CERR losową z trzech wartości "glapa", "kaszuba", "debowski". Wartość oznacza kto ma iść po żarcie.
  *
  */
 #include<vector>
@@ -69,13 +65,14 @@
 #include "CTcpFwd.h"
 using namespace std;
 
+vector<vector<int> > parsuj(vector<vector<string> > tmp);
 void connect(string ADDRESS, int PORT, string LOGIN, string PASSWORD);
 vector<string> split (string x,char splitter = ' ');
 void send_message(string x);
 vector<string> get_message(int lines=1);
 vector<vector<string> > get_message_and_split(int lines=1);
 vector<string> send_message_get_response(string msg,int lines=1);
-vector<string> send_message_get_response_and_split(string msg, int lines=1);
+vector<vector<string > > send_message_get_response_and_split(string msg, int lines=1);
 void wait();
 vector<double> get_all_scores();
 double get_score();
@@ -84,8 +81,3 @@ vector<int> get_time_raw();
 int get_round_number();
 int get_current_turn();
 int get_turns_till_end(); //including this one
-int get_pachocki_debiak_cygan_place();
-string kto_idzie_po_zarcie();
-
-
-
